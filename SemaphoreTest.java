@@ -1,8 +1,6 @@
 import java.util.concurrent.Semaphore;
 
 public class SemaphoreTest {
-
-	// max 4 people
 	static Semaphore read = new Semaphore(1);
 	static Semaphore update = new Semaphore(0);
 	static int num = 0;
