@@ -1,4 +1,3 @@
-package main;
 import java.util.Base64;
 
 import javax.crypto.Mac;
