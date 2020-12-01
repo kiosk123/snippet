@@ -1,7 +1,7 @@
 ### 유용한 코드 조각
 
 ## 설명
- -  HmacSHA256.java
+ - HmacSHA256.java
      - sha256 해쉬코드
  - PagingCalculation.java 
      - 페이징 처리 로직
@@ -12,3 +12,5 @@
      - ./search-class.sh <디렉터리> <클래스명>
  - zip,unzip,gzip,gunzip.java
      - zip, gzip 파일을 압축하고 압축푸는 로직
+ - Querydsl4Repository
+     - querydsl4 지원 리포지토리
