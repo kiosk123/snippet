@@ -96,6 +96,20 @@ $ cut -d":" -f3-5 /etc/passwd | head -n 2
 1:1:bin
 
 #----------------------------------------------------------
+# domainame 운영체제에 설정된 도메인 정보를 확인
+# domainame [옵션] [도메인명]
+$ domainname # 도메인 정보 출력
+(none)
+$ domainname -s # 간단한 호스트명 출력
+localhost
+$ domainname -f # 전체 호스트명 출력
+localhost
+$ domainname -d # dns 도메인명 출력
+$ domainname -i # 호스트 IP주소 출력
+::1 127.0.0.1
+
+
+
 
 
 
