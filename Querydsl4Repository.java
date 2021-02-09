@@ -100,7 +100,7 @@ public abstract class Querydsl4Repository {
     protected BooleanBuilder OperationBuilder(Supplier<BooleanExpression> f) {
         try {
             return new BooleanBuilder(f.get());
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException | NullPointerException e) {
             return new BooleanBuilder();
         }
     }
