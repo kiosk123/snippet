@@ -22,5 +22,5 @@ if [ `sudo fdisk -l | grep '/dev/sd[a-z][0-9]' | awk '{print $1}' | wc -l` -gt 0
     fi
     exit 0
 else
-	exit 1
+    exit 1
 fi
