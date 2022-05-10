@@ -4,12 +4,12 @@ public class SemaphoreTest {
 	static Semaphore read = new Semaphore(1);
 	static Semaphore update = new Semaphore(0);
 	static int num = 0;
-	
+
 	public static void main(String[] args) {
 		new UpdateThread().start();
-		new readThread().start();
+		new ReadThread().start();
 	}
-	
+
 	private static void updateNum(int cnt) {
 		try {
 			update.acquire();
@@ -21,7 +21,7 @@ public class SemaphoreTest {
 			read.release();
 		}
 	}
-	
+
 	private static void readNum() {
 		try {
 			read.acquire();
@@ -33,11 +33,12 @@ public class SemaphoreTest {
 			update.release();
 		}
 	}
-	
+
 	static class UpdateThread extends Thread {
-		
+
 		int thread_count = 0;
 		int cnt = 1;
+
 		@Override
 		public void run() {
 			while (thread_count < 10) {
@@ -48,11 +49,11 @@ public class SemaphoreTest {
 			System.out.println("update thread is dead");
 		}
 	}
-	
-    static class readThread extends Thread {
-		
-    	int thread_count = 0;
-    	
+
+	static class ReadThread extends Thread {
+
+		int thread_count = 0;
+
 		@Override
 		public void run() {
 			while (thread_count < 10) {
