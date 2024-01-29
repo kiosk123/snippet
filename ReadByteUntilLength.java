@@ -11,6 +11,7 @@ private List<PartInfo> uploadParts(String encodedPath, String uploadId, int star
                 while (true) {
                     len = in.read(buf, readLen, PART_SIZE - readLen);
                     if (len == -1 || readLen == PART_SIZE) {
+                        // 소켓의 경우 컴플리트 처리해야됨... 플래그 넣어서
                         break;
                     }
                     readLen += len;
