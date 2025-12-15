@@ -1,0 +1,10 @@
+# import 대상 테이블 선택
+imp userid=ism/ism.1205 file=2025-12-12_herb.dmp tables='(APPLICATION,APPLICATIONAVRO,APPLICATIONCS)' ignore=y log=imp_selected_tables.log
+
+# 테이블 create시 또는 제약조건 문제 발생시 무시하고 데이터 import
+imp userid=ism/ism.1205 \
+  file=2025-12-12_herb.dmp \
+  fromuser=ism \
+  touser=ism \
+  ignore=y \
+  log=imp_ism.log
